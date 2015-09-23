@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<style type="text/css">
+* { margin:0; padding:0; border:none; }
+.content {
+
+	width:80%;
+	margin:0 auto;
+	padding:10px;
+}
+#clickDiv {
+	padding:10px;
+	width:300px;
+	height:300px;
+	background:#FF0000;
+	left:0px;
+	
+}
+
+</style>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div id="clickDiv">Click Here</div>
+</div>
+<script type="text/javascript">
+
+        jQuery('#clickDiv').click(
+            function(){
+                jQuery(this)
+                    .animate(
+                        {
+                            'margin-left':'600px'
+                        },1000,
+                        function(){
+							$( this ).mouseover(function() {
+							$( this ).css( "background","blue" );
+							});
+							
+                        }
+                        );
+                    
+            });
+</script>
+</body>
+  
+</html>
